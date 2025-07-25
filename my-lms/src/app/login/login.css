@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.login-container {
+  max-width: 35vw;
+  margin: 6% auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.login-container h1{
+  text-align: center;
+  font-size: xxx-large;
+  padding-bottom: 9%;
+}
+
+h1>span{
+  color: rgb(0,122,254);
+  font-weight: 600;
+}
+
+.inter-textstyle {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 4%;
+  padding: 2.5%;
+}
+
+.login-button {
+  width: 100%;
+  padding: 2.5%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: royalblue;
+  font-size: large;
+  margin-bottom: 6%;
+
+}
+
+.login-button:hover{
+  background-color: rgb(0,122,254);
+}
+
+.login-error {
+  color: rgb(210, 62, 62);
+  margin-bottom: 2%;
+}
+
+h5{
+  color: gray;
+  /* text-align: center; */
+}
+h5>a{
+  text-decoration: none;
+  color: rgb(0,122,254);
+  font-size: 16px;
+}
+
+h5>a:hover{
+  color: royalblue;
+}
