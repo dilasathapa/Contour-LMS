@@ -79,7 +79,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h2>Today's Lessons</h2>
+      <h2>Today&apos;s Lessons</h2>
 
       <div className='toggle-container'>
         <button className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>All</button>
