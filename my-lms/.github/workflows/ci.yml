@@ -1,0 +1,45 @@
+name: CI for Next.js LMS Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build & Lint Project
+    runs-on: ubuntu-latest
+
+    steps:
+      #Checkout repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      #Set up Node.js
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      #Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      #Lint code (optional but recommended)
+      - name: Run ESLint
+        run: npm run lint
+
+      #Build Next.js app
+      - name: Build Next.js
+        run: npm run build
+
+      #Upload build output (optional)
+      - name: Upload build output
+        uses: actions/upload-artifact@v3
+        with:
+          name: next-build
+          path: .next
