@@ -13,6 +13,10 @@ jobs:
     name: Build & Lint Project
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: my-lms
+
     steps:
       #Checkout repository code
       - name: Checkout code
@@ -42,4 +46,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: next-build
-          path: .next
+          path: my-lms/.next
