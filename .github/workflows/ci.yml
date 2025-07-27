@@ -27,7 +27,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: "npm"
+          cache: 'npm'
+          cache-dependency-path: my-lms/package-lock.json
 
       #Install dependencies
       - name: Install dependencies
