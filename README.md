@@ -1,10 +1,12 @@
-#Student LMS – Full Stack Feature
+# Student LMS – Full Stack Feature
 
+<pre>
+```
 This project implements a basic Learning Management System (LMS) feature where students can:
-✅ Log in / Sign up
+✅ Log in / Sign up 
 ✅ View a dashboard of today’s lessons (with upcoming and completed lessons)
 ✅ Toggle lessons as complete or incomplete
-✅ Navigate to Lectures, Notes, Bookmarks, Assignments, and Quiz
+✅ Navigate to Lectures, Notes, Bookmarks, Assignments, and Quiz 
 
 The project uses:
 
@@ -12,7 +14,7 @@ The project uses:
 - TypeScript
 - Supabase (Database & Authentication)
 
-#Features
+# Features
 
 ✅ User Authentication (via Supabase)
 ✅ Lessons Dashboard (filter: All, Upcoming, Completed)
@@ -20,8 +22,9 @@ The project uses:
 ✅ Responsive Navbar & Sidebar Navigation
 ✅ Search Lectures by Title
 
-#Project Structure
+# Project Structure
 
+<pre> ```bash
 src/
  ├── app/
  │    ├── login/             # Login Page
@@ -37,7 +40,8 @@ src/
  ├── styles/                 # CSS Modules for components
  │
  └── assets/                 # Logos and images
-
+ 
+```</pre>
 
 #Tech Stack
 
@@ -125,6 +129,8 @@ deployed the project in vercel [delpoyed link](https://contour-lms-project-assig
  - Supabase Access (SQL Dump Provided)
 
  - Optional: GitHub Actions CI/CD Config
+
+```</pre>
 
 
 
