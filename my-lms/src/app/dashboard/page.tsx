@@ -15,7 +15,7 @@ export default function Dashboard() {
     id: string;
     title: string;
     description: string;
-    scheduled_date: string;
+    scheduled_date : string;
     duration: string;
     is_completed: boolean;
     img: string;
@@ -28,9 +28,9 @@ export default function Dashboard() {
   const [showAllCompleted, setShowAllCompleted] = useState(false);
 
   useEffect(() => {
-    fecthLessons().then((lessons) => {
+    fecthLessons().then((lessons: Lesson[]) => {
       const today = new Date().toISOString().split('T')[0];
-      const found = lessons.filter((lesson: any) => lesson.scheduled_date === today);
+      const found = lessons.filter((lesson) => lesson.scheduled_date === today);
       setTodayLesson(found.length > 0 ? found : []);
     });
   }, []);
