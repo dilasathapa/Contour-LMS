@@ -32,7 +32,7 @@ jobs:
 
       #Install dependencies
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       #Lint code (optional but recommended)
       - name: Run ESLint
