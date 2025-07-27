@@ -4,18 +4,62 @@
   padding: 1rem 2rem;
   background-color: #f4f4f4;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 
 .searchBar {
   flex: 1;
-  max-width: 400px;
-  padding: 0.5rem;
+  width: 30vw;
+  padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  padding-left: 8%;
+  transition: padding 0.2s ease;
+}
+
+.searchBar::placeholder{
+  color: rgb(200, 197, 197);
+}
+
+.searchBar:focus {
+  outline: none;              
+  border-color: #ccc;          
+}
+
+
+.navsearchcontainer{
+  display: flex;
+  width: 30vw;
+  position: relative;
+  align-items: center;
+}
+
+.navsearchcontainer p{
+  position: absolute;
+  top: 28%;
+  left: 2%;
+  pointer-events: none;
+}
+
+.navProfileIcon{
+  text-align: end;
+  width: 100vw;
+
+}
+
+.navProfileIcon p{
+  font-size: 28px;
+  color: gray;
+  padding-top: 2%;
+  cursor: pointer;
+
 }

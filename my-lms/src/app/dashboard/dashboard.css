@@ -1,0 +1,116 @@
+.upcoming-lesson-title{
+    margin-top: 2%;
+}
+
+.lesson-parent-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin-bottom: 3%;
+}
+
+.toggle-container{
+    border: 1px solid rgb(224, 212, 212);
+    border-radius: 4px;
+    width: 20vw;
+    padding: 0.5%;
+    display: flex;
+    justify-content: space-around;
+    gap: 1%;
+    margin: 1% 0;
+    display: flex;
+}
+
+.toggle-container button{
+    display: block;
+    width: 50%;
+    cursor: pointer;
+    padding: 3%;
+    border: none;
+    border-radius: 4px;
+    
+}
+
+.toggle-container button.active{
+    background-color: #0070f3;
+    color: white;
+    border-color: #0070f3;
+}
+
+.lesson-container{
+    border: 2px solid rgb(224, 212, 212);
+    width: 22vw;
+    height: 320px;
+    margin-top: 1%;
+    border-radius: 10px;
+}
+
+.lesson-container img{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height: 50%;
+}
+
+.lesson-container div{
+    padding-left: 2%;
+}
+
+.lesson-container h4{
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lesson-container h3{
+    color: gray;
+}
+
+.lesson-text{
+    padding: 1% 2%;
+    margin: 3% 0;
+    width: fit-content;
+    border-radius: 14px;
+}
+
+.lesson-text.live{
+    color: green;
+    background-color: rgb(230, 248, 230);    
+}
+
+.lesson-text.self{
+    color: gray;
+    background-color: rgb(237, 237, 237);
+}
+
+.view-more-btn{
+    margin-bottom: 2%;
+    text-decoration: underline;
+    color: gray;
+    cursor: pointer;
+}
+
+
+.lesson-markComplete{
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lesson-markComplete p{
+    color: gray;
+}
+
+.done-icon{
+    margin-right: 4%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.done-icon.done{
+    color: green;
+}
+
+.done-icon.not-done{
+    color: green;
+}

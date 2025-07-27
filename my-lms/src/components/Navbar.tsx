@@ -5,11 +5,12 @@ import { usePathname } from 'next/navigation';
 import styles from '../styles/Navbar.module.css';
 import Image from 'next/image';
 import logo from "../assets/logos/contour-logo.svg"
+import { BsSearch } from "react-icons/bs";
+import { BsPersonSquare } from "react-icons/bs";
 
 export default function Navbar() {
   const pathname = usePathname();
 
-  // If user is on login or signup page, show only logo
   const isAuthPage = pathname === '/login' || pathname === '/signup';
 
   return (
@@ -19,11 +20,19 @@ export default function Navbar() {
       </div>
 
       {!isAuthPage && (
-        <input
-          type="text"
-          placeholder="Search lectures..."
-          className={styles.searchBar}
-        />
+        <>
+        <div className={styles.navsearchcontainer}>
+          <p><BsSearch /></p>
+          <input
+            type="text"
+            placeholder="Search lectures..."
+            className={styles.searchBar}
+            />
+        </div>
+        <div className={styles.navProfileIcon}>
+          <p><BsPersonSquare /></p>
+        </div>
+        </>
       )}
     </nav>
   );

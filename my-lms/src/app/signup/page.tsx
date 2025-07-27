@@ -11,6 +11,7 @@ export default function SignupPage() {
   const [error, setError] = useState('')
   const router = useRouter()
 
+// handling signup
   const handleSignup = async () => {
     const { error } = await supabase.auth.signUp({
       email,
