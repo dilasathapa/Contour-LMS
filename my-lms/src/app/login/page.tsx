@@ -42,7 +42,7 @@ export default function LoginPage() {
       <button onClick={handleLogin} className="login-button">
         Login
       </button>
-      <h5>Don't have an account? <a href='/signup'>sign up</a></h5>
+      <h5>Don&apos;t have an account? <a href='/signup'>sign up</a></h5>
     </div>
   )
 }

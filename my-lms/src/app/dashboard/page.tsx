@@ -7,9 +7,22 @@ import { BsCheckCircleFill } from "react-icons/bs";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./dashboard.css"
+import Image from 'next/image';
 
 export default function Dashboard() {
-  const [todayLesson, setTodayLesson] = useState<any[]>([]);
+
+  interface Lesson {
+    id: string;
+    title: string;
+    description: string;
+    scheduled_date: string;
+    duration: string;
+    is_completed: boolean;
+    img: string;
+    stream : string
+  }
+
+  const [todayLesson, setTodayLesson] = useState<Lesson[]>([]);
   const [filter, setFilter] = useState<'all' | 'upcoming' | 'completed'>('all');
   const [showAllUpcoming, setShowAllUpcoming] = useState(false);
   const [showAllCompleted, setShowAllCompleted] = useState(false);
@@ -30,7 +43,7 @@ export default function Dashboard() {
 
     // formatting date 
   function formatDuration(duration: string): string {
-    const [hours, minutes, seconds] = duration.split(':').map(Number);
+    const [hours, minutes] = duration.split(':').map(Number);
 
     if (hours > 0) {
         return `${hours} hour${hours > 1 ? 's' : ''}${minutes > 0 ? ` ${minutes} min` : ''}`;
@@ -51,6 +64,7 @@ export default function Dashboard() {
                 )
             )
         } catch (error) {
+            console.error(error);
             toast.error('Failed to update lesson status', {
             position: "top-right",
             autoClose: 5000,
@@ -81,8 +95,7 @@ export default function Dashboard() {
           {(showAllUpcoming ? upcomingLessons : upcomingLessons.slice(0, 3)).map((lesson) => (
 
             <div key={lesson.id} className='lesson-container'>
-              
-              <img src={lesson.img} alt={lesson.title} />
+              <Image src={lesson.img} alt={lesson.title} />
               <div>
                 <h4>{lesson.description}</h4>
                 <h3>{lesson.title}</h3>
@@ -117,7 +130,7 @@ export default function Dashboard() {
           <div className='lesson-parent-container'>
           {(showAllCompleted ? completedLessons : completedLessons.slice(0, 3)).map((lesson) => (
             <div key={lesson.id} className='lesson-container'>
-              <img src={lesson.img} alt={lesson.title} />
+              <Image src={lesson.img} alt={lesson.title} />
               <div>
                 <h4>{lesson.description}</h4>
                 <h3>{lesson.title}</h3>
