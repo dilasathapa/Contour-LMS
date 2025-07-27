@@ -96,7 +96,7 @@ npm run dev
     duration interval NOT NULL,
     img text,
     is_completed boolean DEFAULT false,
-    is_live boolean DEFAULT false
+    stream text NOT NULL
   );
 ```
 
